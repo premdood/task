@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch(`/api/greet?name=${name}`);
+      const response = await fetch(`https://task-backend-five-teal.vercel.app/api/greet?name=${name}`);
       if (response.ok) {
         const { message } = await response.json();
         setData(message);
